@@ -1,0 +1,71 @@
+[
+{
+  "name" : "Generi Musicali",
+  "slug" : "Generi",
+  "description" : "Il diagramma qui sopra mostra l’ampiezza delle communities che discutono dei vari generi musicali: quanto più ampio è l’arco, tanto più grande è la community specifica. Il diagramma mostra anche quanti appartenenti ad una community discute anche di altri generi musicali oltre a quello di appartenenza.",
+  "categories" : 
+      [
+        {
+          "name" : "Rock",
+          "slug" : "Rock",
+          "search" : "%rock%",
+          "hue" : 0.1
+        },
+        {
+          "name" : "Blues",
+          "slug" : "Blues",
+          "search" : "%blues%",
+          "hue" : 0.2
+        },
+        {
+          "name" : "Reggae",
+          "slug" : "Reggae",
+          "search" : "%regga%,% dub%",
+          "hue" : 0.3
+        },
+        {
+          "name" : "Jazz",
+          "slug" : "Jazz",
+          "search" : "%jazz%",
+          "hue" : 0.4
+        },
+        {
+          "name" : "Punk",
+          "slug" : "Punk",
+          "search" : "%punk%",
+          "hue" : 0.5
+        },
+        {
+          "name" : "Pop",
+          "slug" : "Pop",
+          "search" : "%pop %",
+          "hue" : 0.6
+        },
+        {
+          "name" : "Italiana",
+          "slug" : "Italiana",
+          "search" : "%italian%",
+          "hue" : 0.7
+        },
+        {
+          "name" : "Classical",
+          "slug" : "Classical",
+          "search" : "%classica%",
+          "hue" : 0.8
+        },
+        {
+          "name" : "Hip Hop",
+          "slug" : "Hip_Hop",
+          "search" : "%hip hop%,%hiphop%,% rap",
+          "hue" : 0.9
+        },
+        {
+          "name" : "Electronica",
+          "slug" : "Electronica",
+          "search" : "%electronic%,%techn%,%house%",
+          "hue" : 1.0
+        }
+
+      ]
+}
+]

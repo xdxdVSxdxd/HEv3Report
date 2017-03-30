@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HER – Monthly Report</title>
+
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"-->
+    <link rel="stylesheet" href="../templates/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="../templates/medium.css">
+	<link rel="stylesheet" type="text/css" href="../templates/style.css">
+	<link rel="stylesheet" type="text/css" href="../templates/fontello-embedded.css">
+
+
+  </head>
+  <body>
+    <div class="container">
+  	
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8 text-center">
+          <img src="../HER-Logo-small.png" class="img-responsive center-block" border="0" />
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+  		<div class="row">
+  			<div class="col-md-2 col-xs-2"></div>
+  			<div class="col-md-8 col-xs-8">
+  				<h1><em><span class="replaceMonthName"></span> <span class="replaceYear"></span></em><small>REPORT</small></h1>
+  			</div>
+  			<div class="col-md-2 col-xs-2"></div>
+  		</div>
+
+
+
+
+  		<div class="row">
+  			<div class="col-md-2 col-xs-2"></div>
+  			<div class="col-md-8 col-xs-8">
+  				<p class="lead">
+  				Qual è il “battito” della musica live a Milano nel mese di <span class="replaceMonthName"></span>?
+  				</p>
+
+				<p><strong>Milano HeartBit</strong> raccoglie e analizza le conversazioni e le espressioni pubbliche dai principali social network in tema di musica live, generando report periodici a disposizione della città per aiutarci a comprendere questo importante fenomeno culturale osservando gli ecosistemi relazionali e comunicativi che esprime. </p>
+
+				<p>Scopri i protagonisti, i temi, i luoghi e le curiosità di <span class="replaceMonthName"></span> con i report generativi di Milano HeartBit.</p>
+
+				<p><strong>Milano HeartBit</strong>, il battito in tempo reale della musica </p>
+
+				<div class="panel panel-default">
+				  <div class="panel-heading">Note:</div>
+				  <div class="panel-body">
+				  	<ul>
+					    <li><strong>Periodo temporale di riferimento</strong>: dal <span class="replaceFromDate"></span> al <span class="replaceToDate"></span>;</li>
+						<li><strong>Fonti</strong>: messaggi pubblici da Twitter; Instagram; selezione di pagine Facebook;</li>
+						<li><strong>Conversazioni selezionate in base a</strong>: rilevanza per la fruizione della musica live nell’area geografica di Milano;</li>
+						<li><strong>Georeferenziazione</strong>: messaggi prodotti “da” e “su” l’area metropolitana di Milano o una specifica location (es.: un distretto, come “Loreto”; o una location, come S. Siro);</li>
+						<li><strong>Metodologie e tecnologie utilizzate</strong>: Natural Language Analysis, Machine Learning, Emotional Analysis, Network Analysis;</li>
+						<li>Dati elaborati dalla piattaforma open source: <strong>Human Ecosystems</strong></li>
+					</ul>
+				  </div>
+				</div>
+  			</div>
+  			<div class="col-md-2 col-xs-2"></div>
+  		</div>
+
+
+		<div class="row">
+  			<div class="col-md-2 col-xs-2"></div>
+  			<div class="col-md-8 col-xs-8">
+  				<h1>Overview</h1>
+  			</div>
+  			<div class="col-md-2 col-xs-2"></div>
+  		</div>
+
+
+  		<div class="row">
+  			<div class="col-md-2 col-xs-2"></div>
+  			<div class="col-md-8 col-xs-8">
+  				<p class='lead'>Nel mese di <span class="replaceMonthName"></span> sono <span class="replaceUsersNumber"></span> gli utenti di Milano che sui social network si sono espressi sul tema della musica live, generando un totale di <span class="replaceMessageNumber"></span> messaggi.</p>
+  			</div>
+  			<div class="col-md-2 col-xs-2"></div>
+  		</div>
+
+
+
+  		<div class="row">
+  			<div class="col-md-2 col-xs-2"></div>
+  			<div class="col-md-8 col-xs-8">
+  				
+  				<div class="row">
+  					<div class="col-xs-8" id="map1">
+  						
+  					</div>
+  					<div class="col-xs-4">
+  						<p>La mappa mostra l’intensità delle conversazioni distribuite sul territorio. </p>
+						<p>Dal verde chiaro, al giallo, fino al rosso, una guida semplice e veloce per comprendere dove si concentrano le conversazioni sulla musica live nell’area metropolitana di Milano.</p>
+						<p>Cosa è successo in quei luoghi?</p>
+  					</div>
+  				</div>
+
+
+  			</div>
+  			<div class="col-md-2 col-xs-2"></div>
+  		</div>
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8">
+          <div id="aed1" class="editable"></div>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+  		<div class="row page-break">
+  			<div class="col-md-2 col-xs-2"></div>
+  			<div class="col-md-8 col-xs-8">
+  				<h1>Sentiment</h1>
+  			</div>
+  			<div class="col-md-2 col-xs-2"></div>
+  		</div>
+
+
+
+  		<div class="row">
+  			<div class="col-md-2 col-xs-2"></div>
+  			<div class="col-md-8 col-xs-8">
+  				<p class='lead'>La  <em>“Sentiment Analysis”</em> è un tipo di analisi utile a fornisce una visione di insieme sulla polarizzazione emotiva (positivo/negativo/neutrale) delle espressioni degli utenti su un certo argomento, nel nostro caso <strong>la musica live</strong>.</p>
+  			</div>
+  			<div class="col-md-2 col-xs-2"></div>
+  		</div>
+
+
+
+  		<div class="row">
+  			<div class="col-md-2 col-xs-2"></div>
+  			<div class="col-md-8 col-xs-8">
+  				
+  									<div class="row">
+										<div class="col-md-4 col-xs-4 tcenter">
+											<i class="sentiment-icon icon-smile big-icon"></i>
+										</div>
+										<div class="col-md-4 col-xs-4 tcenter">
+											<i class="sentiment-icon icon-meh big-icon"></i>
+										</div>
+										<div class="col-md-4 col-xs-4 tcenter">
+											<i class="sentiment-icon icon-frown big-icon"></i>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4 col-xs-4 sentiment-res" id="positive"></div>
+										<div class="col-md-4 col-xs-4 sentiment-res" id="neutral"></div>
+										<div class="col-md-4 col-xs-4 sentiment-res" id="negative"></div>
+									</div>
+
+  			</div>
+  			<div class="col-md-2 col-xs-2"></div>
+  		</div>
+
+
+
+
+
+  		<div class="row">
+  			<div class="col-md-2 col-xs-2"></div>
+  			<div class="col-md-8 col-xs-8" id="sentiment-timeline">
+  			</div>
+  			<div class="col-md-2 col-xs-2"></div>
+  		</div>
+
+
+  		<div class="row">
+  			<div class="col-md-2 col-xs-2"></div>
+  			<div class="col-md-8 col-xs-8">
+  				<p>I due grafici mostrano nell’ordine: 
+					<ul>
+						<li>la distribuzione percentuale del sentiment nel mese di <span class="replaceMonthName"></span>;</li>
+						<li>e l’andamento temporale del sentiment;</li>
+					</ul>
+				</p>
+
+  			</div>
+  			<div class="col-md-2 col-xs-2"></div>
+  		</div>
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8">
+          <div id="aed2" class="editable"></div>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+
+  		<div class="row page-break">
+  			<div class="col-md-2 col-xs-2"></div>
+  			<div class="col-md-8 col-xs-8">
+  				<h1>Emotions</h1>
+  			</div>
+  			<div class="col-md-2 col-xs-2"></div>
+  		</div>
+
+
+
+  		<div class="row">
+  			<div class="col-md-2 col-xs-2"></div>
+  			<div class="col-md-8 col-xs-8">
+
+  				<div class="row">
+  					<div class="col-md-6 col-xs-6">
+	  					<div class="row">
+	  						<div class="col-md-12 col-xs-12">
+			  					<p class='lead'>Più complessa della Sentiment Analysis, l’<strong>Analisi Emozionale</strong> consente di cogliere le molteplici sfumature delle conversazioni.</p>
+								<p>Di seguito una legenda per colori che consente facilmente di identificare le emozioni corrispondenti nei seguenti grafici.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-xs-6">
+						<div class="well">
+							<p>L’Analisi Emozionale di Milano HeartBit fa riferimento al <em>Circumplex Model of Affect</em>, modello scientifico scelto da Human Ecosystems Relazioni per la sua performatività e versatilità. Per approfondire, si veda <strong>James A. Russell</strong> (1980) <em>A Circumplex Model of Affect.</em> in Journal of Personality and Social Psychology, Vol. 39, No. 6, pp. 1161–1178.</p>
+						</div>
+					</div>
+				</div>
+  			</div>
+  			<div class="col-md-2 col-xs-2"></div>
+  		</div>
+
+
+  		<div class="row">
+  			<div class="col-md-2 col-xs-2"></div>
+  			<div class="col-md-8 col-xs-8" id="emotions-map">
+  			</div>
+  			<div class="col-md-2 col-xs-2"></div>
+  		</div>
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" id="emotions-legend">
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8">
+          <p>La mappa mostra la densità emozionale per aree geografiche dei contenuti espressi sulla musica live a Milano.  </p>
+          <p>I messaggi raccolti e visualizzati sulla mappa sono quelli per cui il sistema è in grado di:</p>
+          <ul>
+            <li>stabilire la posizione (georeferenziare il messaggio quando è chiaramente  “riferito a” una location o “generato da” una location);</li>
+            <li>identificarne lo stato emozionale. </li>
+          </ul>
+          <p>Una guida semplice e veloce per orientarsi nel “paesaggio emozionale” generato dalle conversazioni sulla musica live in città e, perché no, decidere di andare a scoprire dal vivo le location più amate (e odiate) dai milanesi.</p>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" id="emotion-pie">
+          
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" >
+          <p>Il grafico a torta mostra la distribuzione delle emozioni nel mese di <span class="replaceMonthName"></span> <span class="replaceYear"></span>.</p>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" id="emotion-distrib">
+          
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8">
+          <p>Il grafico mostra la distribuzione delle emozioni secondo il Circumplex Model of Affect <em>(v. nota)</em>: </p>
+          <ul>
+            <li>sull’asse delle ascisse si trova “l’energia”;</li>
+            <li>sull’asse delle ordinate il “comfort”. </li>
+          </ul>
+          <p>Ogni puntino rappresenta un messaggio, posizionato in uno dei quattro quadranti in base al livello di energia e comfort espressi dal messaggio <em>(es.: un messaggio “gioioso” corrisponde in questo modello ad un alto confort e ad una bassa energia, posizionandosi sul quadrante in alto a destra, vicino all'asse delle ascisse)</em>. La grandezza dei puntini corrisponde al numero di messaggi che esprimono quel certo tipo di emozione: maggiore è il puntino, maggiore è il numero di messaggi che esprimono quella emozione.</p>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" id="emotion-time">
+          
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" >
+          <p>Il grafico consente di apprezzare gli andamenti emozionali nel tempo. </p>
+          <p>Seguendo il “ritmo” emozionale del mese è facilissimo individuare i picchi: cosa è successo quel giorno a <span class="replaceMonthName"></span> a Milano?</p>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>      
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8">
+          <div id="aed3" class="editable"></div>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+      <div class="row page-break">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" >
+          <h2>Top Emotions</h2>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" >
+          <p class='lead'>Quali sono le emozioni più diffuse? Come se ne parla? E quando?</p>
+          <p>Questa tabella mostra la classifica delle 5 emozioni prevalenti nel mese di <span class="replaceMonthName"></span>, associate al messaggio corrispondente alla relativa emozione con maggiore engagement, <em>(cioè il messaggio che ha generato più condivisioni)</em> e alla data di pubblicazione del messaggio. </p>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>      
+
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" id="top-emotions" >
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8">
+          <div id="aed4" class="editable"></div>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+      <div class="row page-break">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" >
+          <h1>Top Users</h1>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" >
+          <p class='lead'>Chi parla di musica live a Milano? Quali sono i “top” user?</p>
+          <p>La tabella comparativa mostra i 10 utenti più attivi secondo due modalità:</p>
+          <ul>
+            <li><strong>il “reach”</strong>, il numero di utenti che potenzialmente vedono il contenuto;</li>
+            <li><strong>l’“engagement/post ratio”</strong>, il numero di condivisioni (share) che originano da un post.</li>
+          </ul>
+          <p><em>Gli utenti con reach alto</em> sono, di solito, soggetti con tanti follower e che, quindi, possono attivare grandi pubblici. Spesso sono soggetti mainstream: grandi operatori, marchi o persone famose.</p>
+          <p><em>Il rapporto tra engagement e post</em>, invece, misura l’efficacia della comunicazione: più è alto, più i messaggi di quell’utente sono stati efficaci nel coinvolgere le persone. Una comunità attiva e naturalezza e spontaneità sono, spesso, i maggiori ingredienti per ottenere un rapporto elevato.</p>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-4 col-xs-4" id="top-users-reach" ></div>
+        <div class="col-md-4 col-xs-4" id="top-users-ratio" ></div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" >
+          <p>Un modo interessante per iniziare a scoprire i protagonisti della musica live nell’area metropolitana di Milano.</p>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8">
+          <div id="aed5" class="editable"></div>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+      <div class="row page-break">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" >
+          <h1>Topics</h1>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" >
+          <p class="lead">Quali sono gli argomenti correlati alla musica live a Milano?</p>
+          <p>A <span class="replaceMonthName"></span> sono stati discussi <span class="replaceNumTopics"></span> topic differenti. Il topic più discusso, <span class="replaceTopTopic"></span>, è stato trattato da <span class="replaceTopTopicNumUsers"></span> utenti.</p>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" id="topics" ></div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" >
+          <p>La tabella mostra i 20 topic più discussi, mostrando per  ogni topic il numero di utenti che ne parlano e una piccola chicca: il messaggio che, per il relativo argomento, ha generato più engagement.</p>
+          <p class="lead">Divertitevi a scoprirli.</p>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" id="toptopics" ></div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8">
+          <div id="aed6" class="editable"></div>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+      <div class="row page-break">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" >
+          <h1>I Distretti e le Venues</h1>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" >
+          <p class="lead">Quali sono i distretti e le venue che generano maggiori discussioni?</p>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" id="distrettivenues" ></div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-4 col-xs-4" >
+          <h4>Venues</h4>
+          <table class='legendtable'>
+            <tr>
+              <th>Type</th>
+              <th>Color</th>
+            </tr>
+            <tr>
+              <td class='voice'>Arene, piazze, parchi<td>
+              <td class='color c1'><td>
+            </tr>
+            <tr>
+              <td class='voice'>Teatri, sale concerto<td>
+              <td class='color c2'><td>
+            </tr>
+            <tr>
+              <td class='voice'>venues<td>
+              <td class='color c3'><td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-4 col-xs-4" >
+          <h4>Areas</h4>
+          <table class='legendtable'>
+            <tr>
+              <th>Type</th>
+              <th>Color</th>
+            </tr>
+            <tr>
+              <td class='voice'>Distretti<td>
+              <td class='color c4'><td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" >
+          <p>La mappa visualizza i distretti e le location più attivi nel mese di <span class="replaceMonthName"></span>, secondo due parametri principali: </p>
+          <ul>
+            <li>quelli di cui le persone parlano di più (“ci vediamo a Isola per il live di questa sera”; “andiamo al locale X”);</li>
+            <li>quelli dalla cui localizzazione geografica vengono generati più messaggi.</li>
+          </ul>
+          <p>Il livello di attività è evidenziato dall’intensità di colorazione (per i distretti) e dall’ampiezza del raggio (per le location): </p>
+          <ul>
+            <li>più è intensa la colorazione verde del distretto, più “attivo” è il distretto; </li>
+            <li>maggiore è il raggio del puntino, più “attiva” è la location.</li>
+          </ul>
+          <p>Le location sono inoltre distinguibili, grazie alla leggenda colorata, in:</p>
+          <ul>
+          <li>“Arene, Piazze e Parchi” (azzurro); </li>
+          <li>“Teatri e sale concerto” (giallo);</li>
+          <li>“Venue” (rosa).</li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8">
+          <div id="aed7" class="editable"></div>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" >
+          <h2>Intensità emozionale dei distretti e delle venues</h2>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" >
+          <p>La tabella mostra per ogni distretto la quantità di messaggi generati da o riferiti al distretto, associando la relativa emozione predominante.</p>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" id="polyemotions">
+          
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" >
+          <h4>Le 3 Venue più amate</h4>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" id="mostlovedvenues">
+          
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" >
+          <h4>Le 3 Venue più discusse</h4>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" id="mostdiscussedvenues">
+          
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" >
+          <h4>Tutte le Venue</h4>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" id="mostallvenues">
+          
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8">
+          <div id="aed8" class="editable"></div>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+      <div class="row page-break">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8" >
+          <h1>Focus</h1>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+
+      <div id="classificazioni"></div>
+
+
+  	</div>
+
+
+
+      <div class="row">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-8 col-xs-8">
+          <div id="aed9" class="editable"></div>
+        </div>
+        <div class="col-md-2 col-xs-2"></div>
+      </div>
+
+
+    <script src="../templates/rangy-core.js"></script>
+    <script src="../templates/rangy-classapplier.js"></script>
+    <script src="../templates/undo.js"></script>
+    <script src="../templates/medium.js"></script>
+  <script type="text/javascript"src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=visualization&sensor=false"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="../templates/1-highstock.js"></script>
+	<script src="../templates/2-highcharts-more.js"></script>
+	<script src="../templates/app.js"></script>
+  </body>
+</html>
