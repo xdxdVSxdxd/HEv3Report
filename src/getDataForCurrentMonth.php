@@ -7,14 +7,14 @@ date_default_timezone_set("Europe/Rome");
 
 
 $GeoPolygonsName = "Distretti";
-$GeoPolygonFiles = [ 
-// "/GeoJSON/Distretti.geojson" 
+$GeoPolygonFiles = [  
+	"/GeoJSON/Distretti.geojson"
 ];
 $GeoPointsName = "Venues";
 $GeoPointFiles = [   
-	// "/GeoJSON/Arene-piazze-parchi.geojson"  ,
-	// "/GeoJSON/teatri-sale-concerto.geojson"  ,
-	// "/GeoJSON/venues.geojson" 
+	 "/GeoJSON/Arene-piazze-parchi.geojson"  ,
+	 "/GeoJSON/teatri-sale-concerto.geojson"  ,
+	 "/GeoJSON/venues.geojson" 
 ];
 
 
